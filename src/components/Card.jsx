@@ -1,8 +1,5 @@
 import React from 'react';
 export default function Card({image, title, description}) {
-
-
-
   return (
       <>
         <div className="flex border-t-4  border-pink-500  justify-center items-center flex-col gap-y-4  w-[340px]    p-8 mx-8 sm:mx-0  bg-white">

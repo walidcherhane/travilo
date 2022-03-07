@@ -8,7 +8,7 @@ import avatar_2 from "../assets/images/avatars/av-(2).jpg"
 import avatar_3 from "../assets/images/avatars/av-(3).jpg"
 
 
-import {BsFacebook,BsInstagram, BsTwitter, BsWhatsapp} from 'react-icons/bs'
+import {BsInstagram, BsTwitter, BsWhatsapp} from 'react-icons/bs'
 export default function About() {
   return (
       <>
@@ -79,7 +79,7 @@ export default function About() {
                             <div className="p-4   w-[270px] text-center">
                                 <div className="w-full">
                                     <div className="rounded-full mx-auto w-[70%] border-8  border-white shadow-lg overflow-hidden">
-                                        <img src={avatar_1} alt="" />
+                                        <img src={avatar_2} alt="" />
                                     </div>
                                     <div className="mt-4 font-semibold text-xl">
                                         John Bennett
@@ -106,7 +106,7 @@ export default function About() {
                             <div className="p-4   w-[270px] text-center">
                                 <div className="w-full">
                                     <div className="rounded-full mx-auto w-[70%] border-8  border-white shadow-lg overflow-hidden">
-                                        <img src={avatar_1} alt="" />
+                                        <img src={avatar_3} alt="" />
                                     </div>
                                     <div className="mt-4 font-semibold text-xl">
                                         John Bennett

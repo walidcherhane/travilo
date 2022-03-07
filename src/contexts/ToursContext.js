@@ -26,19 +26,11 @@ export function ToursProvider ({children}){
 
   useEffect(()=>{
     const fetchTours = ()=>{
-      // ----------------------------------------------------------------
 
       client.fetch(allToursQuery).then((data)=>{
         setTours(data)
       }).catch((error)=>{console.log(error)});
-
-      // ----------------------------------------------------------------
-      // console.log(tours) 
-      
-      
-      // ----------------------------------------------------------------
-
-        }
+    }
          return fetchTours()
     }, [])
 

@@ -1,5 +1,4 @@
-import React, { useEffect,useState } from "react";
-import bg from "../assets/images/hero-bg-3.jpg";
+import React, { useState } from "react";
 import {Grid } from '@mantine/core'
 import {urlFor} from "../client"
 import { useTours } from "../contexts/ToursContext";

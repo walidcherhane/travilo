@@ -1,7 +1,7 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
-    "./src/components/*.{jsx}", 
+    "./src/components/*.jsx", 
     "./node_modules/flowbite/**/*.js"
   ],
   theme: {
@@ -31,6 +31,5 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/line-clamp'),         
-    require('flowbite/plugin')
   ],
 }
