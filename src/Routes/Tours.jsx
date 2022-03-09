@@ -1,40 +1,38 @@
 import React, { useRef, useState } from "react";
 import bg from "../assets/images/hero-bg-3.jpg";
-import {ActionIcon, Checkbox, RangeSlider, TextInput} from "@mantine/core";
-import {FaSearch} from "react-icons/fa";
+import {Grid, ActionIcon} from "@mantine/core";
 import {FcFilledFilter} from "react-icons/fc"
 import useSearch from "../Hooks/useSearch";
-import {Grid } from '@mantine/core'
 import {FiList, FiGrid} from'react-icons/fi'
 import Pagination from "../components/Pagination";
-import {XyzTransition} from "@animxyz/react";
 import {useClickAway} from 'ahooks'
 import {useMediaQuery} from "react-responsive";
 import {urlFor} from "../client"
 import { useTours } from "../contexts/ToursContext";
 import { Link } from "react-router-dom";
 import notFoundImage from '../assets/gifs/notfound.gif'
+import Search from "../components/Search";
+
 const Tours = () => {
     const {tours} = useTours()
     const [searchQuery, setSearchQuery] = useState('')
+    const MatchedResult = useSearch(tours, searchQuery,'city')
     const [isGrid, setIsGrid] = useState(false)
     const [currentPage, setCurrentPage] = useState(1);
     const [isSideSearchOpen, setIsSideSearchOpen] = useState(false)
-    const MatchedResult = useSearch(tours, searchQuery,'city')
-    const isSideSearchRef = useRef() 
+    const sideSearchRef = useRef() 
     const isMidScreen = useMediaQuery({query: "(min-width: 768px)"});
-    const marks = [
-      {value: 20, label: "20%"},
-      {value: 50, label: "50%"},
-      {value: 80, label: "80%"},
-    ];
+
     useClickAway(()=>{
       setIsSideSearchOpen(false)
-    }, isSideSearchRef)
+    }, sideSearchRef)
+
     const handleSearch = (e)=>{
       const query = e.target.value
       setSearchQuery(query)
     }
+
+
     const paginate = pageNumber => setCurrentPage(pageNumber);
     const postsPerPage = 4
     const indexOfLastPost = currentPage * postsPerPage;
@@ -107,46 +105,7 @@ const Tours = () => {
                 </Grid.Col>
                 </Grid>
             </div>
-            <XyzTransition xyz='fade right'>
-              {
-                (isSideSearchOpen || isMidScreen)  && (
-                  <div ref={isSideSearchRef} className=" absolute bg-white/90 md:static right-0 -top-32 left-[100px] p-8 pt-14 md:p-0 md:bg-transparent lg:mx-20 col-span-3 lg:col-span-2   order-1 text-gray-800   md:-translate-y-32">
-
-                  <div className="  lg:shadow-2xl border-t-4 border-pink-500 shadow-gray-300 bg-white p-4 py-10 mb-8 ">
-                    <div className="text-xl font-semibold  text-gray-900 mb-2">Search Tours</div>
-                    <p className="font-light text-sm text-gray-400 leading-4 tracking-wider mb-6">Lorem ipsum dolor sit amet</p>
-                    <TextInput onChange={handleSearch} size="lg" rightSection={<FaSearch />} placeholder="Search Location" />
-                  </div>
-                  <div className="   lg:shadow-2xl border-t-4 border-pink-500 shadow-gray-300 bg-white p-4 py-10 mb-8 ">
-                    <div className="text-xl font-semibold  text-gray-900 mb-2">Tours Categories</div>
-                    <p className="font-light text-sm text-gray-400 leading-4 tracking-wider mb-6">Lorem ipsum dolor sit amet rye</p>
-                    <div className="flex flex-col gap-y-4 ml-4">
-                      <Checkbox label="Adventure Tours" color="pink" radius="xl" size="md" />
-                      <Checkbox label="City Tours" color="pink" radius="xl" size="md" />
-                      <Checkbox label="Single Tours" color="pink" radius="xl" size="md" />
-                      <Checkbox label="Group Tours" color="pink" radius="xl" size="md" />
-                    </div>
-                  </div>
-                  <div className="   lg:shadow-2xl border-t-4 border-pink-500 shadow-gray-300 bg-white p-4 py-10 mb-8 ">
-                    <div className="text-xl font-semibold  text-gray-900 mb-2">Price Range</div>
-                    <p className="font-light text-sm text-gray-400 leading-4 tracking-wider mb-6">Lorem ipsum dolor sit amet rye</p>
-                    <RangeSlider defaultValue={[20, 80]} marks={marks} />
-                  </div>
-                  <div className="   lg:shadow-2xl border-t-4 border-pink-500 shadow-gray-300 bg-white p-4 py-10 mb-8 ">
-                    <div className="text-xl font-semibold  text-gray-900 mb-2">Date Range</div>
-                    <p className="font-light text-sm text-gray-400 leading-4 tracking-wider mb-6">Lorem ipsum dolor sit amet rye</p>
-                    <div className="flex flex-col gap-y-4 ml-4">
-                      <Checkbox label="1 - 3" color="pink" radius="xl" size="md" />
-                      <Checkbox label="3 - 4" color="pink" radius="xl" size="md" />
-                      <Checkbox label="4 - 5" color="pink" radius="xl" size="md" />
-                      <Checkbox label="5 - Above" color="pink" radius="xl" size="md" />
-                    </div>
-                  </div>
-                </div>
-                )
-
-              }
-           </XyzTransition>
+              <Search handleSearch={handleSearch} isOpen={isSideSearchOpen} ref={sideSearchRef} />
           </div>
         </div>
       </div>

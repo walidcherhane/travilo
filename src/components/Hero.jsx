@@ -1,4 +1,3 @@
-// import { Select } from '@mantine/core';
 import { DateRangePicker } from '@mantine/dates';
 import {FaSearch} from 'react-icons/fa'
 import React, { useState } from 'react';

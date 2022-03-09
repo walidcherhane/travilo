@@ -11,7 +11,7 @@ export function ToursProvider ({children}){
   const allToursQuery = '*[_type == "tours"]';
 
   const getCityTours = (city) =>{
-    return  tours.filter((tour)=> tour.city === city)
+    return  tours.filter((tour)=> (tour.city === city))
   }
 
   const ToursByCity = [

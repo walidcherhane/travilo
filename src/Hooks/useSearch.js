@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-const useSearch = (data = Object,query = String, searchBy) => {
+const useSearch = (data ,query , searchBy) => {
     const [filteredData, setFilteredData] = useState([]) 
 
     useEffect(()=>{
@@ -10,7 +10,9 @@ const useSearch = (data = Object,query = String, searchBy) => {
                 return data
             } else {
                 data.forEach((item)=>{
-                    if(item[searchBy]?.toLowerCase().includes(query.toLowerCase())){
+                    if(
+                        item[searchBy]?.toLowerCase().includes(query.toLowerCase()) 
+                    ){
                         filteredData.push(item);
                     }
                 })

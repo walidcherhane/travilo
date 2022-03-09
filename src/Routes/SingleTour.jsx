@@ -9,7 +9,7 @@ import {BsWhatsapp} from "react-icons/bs";
 import {useTours} from "../contexts/ToursContext";
 import isEmpty from "validator/es/lib/isEmpty";
 import {urlFor} from "../client";
-import Error_404 from "../components/Error_404";
+import Error404 from "../components/Error_404";
 
 function SingleTour() {
   const {tours} = useTours();
@@ -122,7 +122,7 @@ function SingleTour() {
           </div>
         </>
       ) : (
-        <Error_404 />
+        <Error404 />
       )}
     </>
   );
