@@ -26,27 +26,27 @@ export default function ContactUs() {
                 </ul>
               </div>
             </div>
-            <div class="bg-gray-100 p-8 rounded-2xl">
+            <div className="bg-gray-100 p-8 rounded-2xl">
               <div className="flex  gap-4">
                 <div>
-                  <span class="uppercase text-sm text-gray-600 font-bold">First Name</span>
-                  <input class="  outline-pink-500 w-full  bg-white text-gray-900 mt-2 p-3 rounded-lg  focus:shadow-outline" type="text" placeholder="" />
+                  <span className="uppercase text-sm text-gray-600 font-bold">First Name</span>
+                  <input className="  outline-pink-500 w-full  bg-white text-gray-900 mt-2 p-3 rounded-lg  focus:shadow-outline" type="text" placeholder="" />
                 </div>
                 <div>
-                  <span class="uppercase text-sm text-gray-600 font-bold">Last Name</span>
-                  <input class="  outline-pink-500 w-full  bg-white text-gray-900 mt-2 p-3 rounded-lg  focus:shadow-outline" type="text" placeholder="" />
+                  <span className="uppercase text-sm text-gray-600 font-bold">Last Name</span>
+                  <input className="  outline-pink-500 w-full  bg-white text-gray-900 mt-2 p-3 rounded-lg  focus:shadow-outline" type="text" placeholder="" />
                 </div>
               </div>
-              <div class="mt-4">
-                <span class="uppercase text-sm text-gray-600 font-bold">Email</span>
-                <input class="  outline-pink-500 w-full  bg-white text-gray-900 mt-2 p-3 rounded-lg  focus:shadow-outline" type="Email" />
+              <div className="mt-4">
+                <span className="uppercase text-sm text-gray-600 font-bold">Email</span>
+                <input className="  outline-pink-500 w-full  bg-white text-gray-900 mt-2 p-3 rounded-lg  focus:shadow-outline" type="Email" />
               </div>
-              <div class="mt-4">
-                <span class="uppercase text-sm text-gray-600 font-bold">Message</span>
-                <textarea class="  outline-pink-500 w-full h-32  bg-white text-gray-900 mt-2 p-3 rounded-lg  focus:shadow-outline min-h-[100px]"></textarea>
+              <div className="mt-4">
+                <span className="uppercase text-sm text-gray-600 font-bold">Message</span>
+                <textarea className="  outline-pink-500 w-full h-32  bg-white text-gray-900 mt-2 p-3 rounded-lg  focus:shadow-outline min-h-[100px]"></textarea>
               </div>
-              <div class="mt-4">
-                <button class="uppercase text-sm font-bold tracking-wide bg-pink-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">Send Message</button>
+              <div className="mt-4">
+                <button className="uppercase text-sm font-bold tracking-wide bg-pink-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">Send Message</button>
               </div>
             </div>
           </div>
