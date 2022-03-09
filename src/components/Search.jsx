@@ -4,14 +4,14 @@ import {useMediaQuery} from "react-responsive";
 import {XyzTransition} from "@animxyz/react";
 import {FaSearch} from "react-icons/fa";
 
-function Search({handleSearch, isOpen, ref}) {
+function Search({handleSearch, isOpen, refer}) {
   const isMidScreen = useMediaQuery({query: "(min-width: 768px)"});
   return (
     <>
       <XyzTransition xyz="fade right">
         {(isOpen || isMidScreen) && (
           <div
-            ref={ref}
+            ref={refer}
             className=" absolute bg-white/90 md:static right-0 -top-32 left-[100px] p-8 pt-14 md:p-0 md:bg-transparent lg:mx-20 col-span-3 lg:col-span-2   order-1 text-gray-800   md:-translate-y-32"
           >
             <div className="  lg:shadow-2xl border-t-4 border-pink-500 shadow-gray-300 bg-white p-4 py-10 mb-8 ">

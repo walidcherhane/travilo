@@ -105,7 +105,7 @@ const Tours = () => {
                 </Grid.Col>
                 </Grid>
             </div>
-              <Search handleSearch={handleSearch} isOpen={isSideSearchOpen} ref={sideSearchRef} />
+              <Search handleSearch={handleSearch} isOpen={isSideSearchOpen} refer={sideSearchRef} />
           </div>
         </div>
       </div>

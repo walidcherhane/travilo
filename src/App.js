@@ -5,7 +5,7 @@ import "@animxyz/core";
 import {Home, Tours, Contact, About, SingleTour} from "./Routes";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import Loader from "./Routes/utils/Loader";
+import Loader from "./utils/Loader";
 import {ToursProvider} from "./contexts/ToursContext";
 import ToursByCity from "./Routes/ToursByCity";
 import ErrorNotFound from "./components/Error_404";
