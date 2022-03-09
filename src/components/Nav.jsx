@@ -60,7 +60,7 @@ export default function Nav() {
                     onClick={() => {
                       setIsNavActive(!isNavActive);
                     }}
-                    className="menu-icons fill-gray-100"
+                    className="menu-icons fill-gray-100 absolute top-4 right-4 z-30 "
                   >
                     <Burger
                       color="#ffff"
@@ -74,7 +74,7 @@ export default function Nav() {
                 </div>
                 <XyzTransition xyz="fade right ">
                   {isNavActive && (
-                    <ul ref={nav} className="absolute right-0 flex h-screen w-[80%]  bg-gray-900/90 backdrop-blur-sm p-8 gap-2 flex-col text-white font-bold  list-none gap-x-10">
+                    <ul ref={nav} className="absolute right-0 top-0 flex h-screen w-[80%]  bg-gray-900/90 backdrop-blur-sm p-8 gap-2 flex-col text-white font-bold  list-none gap-x-10">
                       {navItems.map((item) => (
                         <li key={item} className=" hover:bg-white hover:text-gray-900 transition-all">
                           <Link className="block w-full p-4 capitalize" to={`/${item}`}>
