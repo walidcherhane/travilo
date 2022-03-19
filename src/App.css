@@ -7,8 +7,12 @@
     font-family: 'poppins' 
 }
 
-html, body{
+html{
   scroll-behavior: smooth;
+  height:100%;
+}
+#root{
+  min-height:100%;
 }
 @layer components {
     .btn-primary {

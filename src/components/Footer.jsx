@@ -4,14 +4,14 @@ export default function Footer() {
     const footerLinks = ['home','tours', 'contact', 'about']
   return (
     <>
-      <footer className="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-           Travilo, All Rights Reserved 2021 
+      <footer className="p-4  bg-gray-50  mt-auto text-center  md:flex md:items-center md:justify-between md:p-6 ">
+          <span className=" md:text-sm text-lg text-gray-500 sm:text-center  ">
+           Travilo  All Rights Reserved 2021 
           </span>
-          <ul className="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+          <ul className="flex flex-wrap justify-center  mt-3 text-sm  md:ml-auto  gap-4 text-gray-500  sm:mt-0">
               { footerLinks.map((link)=>(
                   <li key={link}>
-                    <Link to={`/${link}`} className="mr-4 hover:underline md:mr-6 capitalize"> {link} </Link>
+                    <Link to={`/${link}`} className=" hover:underline  capitalize"> {link} </Link>
                   </li>
               ))}
           </ul>
